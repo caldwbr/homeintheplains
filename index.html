@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home in the Plains | Auburn Real Estate | Brad Caldwell</title>
+    <meta name="description" content="Find your home in the Plains with Brad Caldwell. Expert real estate services for Auburn, Opelika, and Lake Martin.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #002D62; /* Navy - Authority */
+            --accent: #E87722;  /* Auburn Orange - Local feel */
+            --text: #333;
+            --bg: #ffffff;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; }
+
+        /* --- HEADER & NAVIGATION --- */
+        header { background: #fff; border-bottom: 2px solid #f0f0f0; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        
+        /* 2026 PROMINENCE COMPLIANCE */
+        .branding h1 { font-size: 1.5rem; color: var(--primary); text-transform: uppercase; }
+        .branding h2 { font-size: 1.2rem; font-weight: 300; color: #666; }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center;
+            height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 20px;
+        }
+        .hero-box h3 { font-size: 3rem; margin-bottom: 1rem; }
+        
+        /* THE SEARCH TOOL (Placeholder for your IDX) */
+        .search-bar { background: white; padding: 10px; border-radius: 50px; display: flex; width: 100%; max-width: 600px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .search-bar input { border: none; flex: 1; padding: 15px 25px; border-radius: 50px; font-size: 1rem; outline: none; }
+        .search-btn { background: var(--accent); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+
+        /* --- RESPONSIVE TOOLS --- */
+        @media (max-width: 768px) {
+            nav { display: none; } /* Add a hamburger menu later */
+            .hero-box h3 { font-size: 2rem; }
+            .header-content { flex-direction: column; text-align: center; }
+        }
+
+        /* --- FOOTER --- */
+        footer { background: #222; color: #fff; padding: 40px 5%; text-align: center; font-size: 0.9rem; }
+        .footer-logo { font-size: 1.2rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <h1>Auburn International Real Estate Group</h1>
+                <h2>Brad Caldwell, REALTOR®</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/search">Property Search</a></li>
+                    <li><a href="/lake-martin">Lake Martin</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-box">
+                <h3>Welcome to the Plains.</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Find your next home in Auburn, Opelika, or Lake Martin.</p>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Zip code, neighborhood, or city...">
+                    <button class="search-btn">SEARCH</button>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer>
+        <div class="footer-logo">Auburn International Real Estate Group</div>
+        <p>3365 Skyway Drive, Suite 201, Auburn, AL 36830</p>
+        <p>© 2026 Brad Caldwell. Licensed in the State of Alabama.</p>
+        <p style="margin-top: 20px; font-size: 0.7rem; color: #999;">
+            REALTOR® — A registered collective membership mark that identifies a real estate professional who is a member of the National Association of REALTORS® and subscribes to its strict Code of Ethics.
+        </p>
+    </footer>
+
+</body>
+</html>
