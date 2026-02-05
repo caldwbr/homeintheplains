@@ -67,3 +67,18 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Ignore all large video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Ignore high-res raw images (only keep web-optimized ones)
+*.psd
+*.ai
+*.raw
+*.tiff
+
+# Ignore your private system files
+.DS_Store

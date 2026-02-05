@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home in the Plains | Auburn Real Estate | Brad Caldwell</title>
-    <meta name="description" content="Find your home in the Plains with Brad Caldwell. Expert real estate services for Auburn, Opelika, and Lake Martin.">
-    <link rel="icon" type="image/png" href="images/output2homeintheplainsFav2.png">
-    <link rel="apple-touch-icon" href="images/output2homeintheplainsFav2.png">
+    <title>Buying a Home in Auburn | Brad Caldwell Real Estate</title>
+    <meta name="description" content="Your guide to buying real estate in Auburn, Opelika, and Lee County. Start your home search and learn the local buying process.">
+    <link rel="icon" type="image/png" href="../images/output2homeintheplainsFav2.png">
+    <link rel="apple-touch-icon" href="../images/output2homeintheplainsFav2.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #002D62; /* Navy - Authority */
-            --accent: #E87722;  /* Auburn Orange - Local feel */
+            --primary: #002D62;
+            --accent: #E87722;
             --text: #333;
             --bg: #ffffff;
+            --light: #f8f9fa;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,7 +24,6 @@
         /* --- HEADER & NAVIGATION --- */
         header { background: #fff; border-bottom: 2px solid #f0f0f0; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
         .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        
         .branding h1 { font-size: 1.5rem; color: var(--primary); text-transform: uppercase; }
         .branding h2 { font-size: 1.2rem; font-weight: 300; color: #666; }
 
@@ -31,33 +31,26 @@
         nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
         nav a:hover { color: var(--accent); }
 
-        /* Dropdown Logic */
-        .dropdown { position: relative; cursor: pointer; }
-        .dropdown-menu { 
-            display: none; position: absolute; background: white; 
-            min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
-            list-style: none; padding: 10px 0; top: 100%; border-top: 3px solid var(--accent);
-            right: 0;
-        }
-        .dropdown:hover .dropdown-menu { display: block; }
-        .dropdown-menu li a { padding: 10px 20px; font-size: 0.9rem; display: block; }
-
         /* --- HERO SECTION --- */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
-            height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 20px;
+            height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
-        .hero-box h3 { font-size: 3.5rem; margin-bottom: 0.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero-box p { font-size: 1.2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        .hero h3 { font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 
-        /* --- RESPONSIVE TOOLS --- */
-        @media (max-width: 768px) {
-            nav { display: none; } 
-            .hero-box h3 { font-size: 2.2rem; }
-            .header-content { flex-direction: column; text-align: center; }
-            .branding { margin-bottom: 15px; }
-        }
+        /* --- BUYING STEPS SECTION --- */
+        .buying-steps { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 50px; }
+        
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .step-card { background: var(--light); padding: 30px; border-radius: 12px; border-top: 4px solid var(--accent); }
+        .step-num { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; opacity: 0.3; }
+        .step-card h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.25rem; }
+
+        /* --- IDX SEARCH SECTION --- */
+        .search-section { padding: 60px 0; background: #fff; text-align: center; }
+
 
         /* Dropdown Logic (Desktop) */
         .dropdown { position: relative; cursor: pointer; }
@@ -76,21 +69,7 @@
             margin: 60px auto; 
             padding: 0 5%; 
         }
-        .steps-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 30px; 
-            max-width: 1200px; 
-            margin: 40px auto;
-            padding: 0 5%;
-        }
 
-        /* --- 3. COMPONENT STYLES --- */
-        .step-card { 
-            background: white; padding: 30px; border-radius: 12px; 
-            border-top: 4px solid var(--accent); height: 100%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
         .content h2 { margin-top: 40px; color: var(--primary); border-left: 5px solid var(--accent); padding-left: 20px; margin-bottom: 20px; }
         .local-tip { background: #fff4ed; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); margin: 30px 0; }
 
@@ -149,59 +128,74 @@
     <main>
         <section class="hero"> 
             <div class="hero-box">
-                <h3>Welcome to the Plains.</h3>
-                <p>Find your next home in Auburn or Opelika (Lee County).</p>
+                <h3>Your Journey Home Starts Here.</h3>
+                <p>Expert guidance through the Auburn & Opelika market.</p>
             </div>
         </section>
 
-        <section style="padding: 60px 0; max-width: 1400px; margin: 0 auto;">
-            <h2 style="text-align: center; color: var(--primary); margin-bottom: 30px;">
-                Search Auburn and Surrounding Lee County Listings
-            </h2>
-
-            <iframe title="real estate search"
-                src="https://matrix.lcar.mlsmatrix.com/Matrix/public/IDX.aspx?idx=9ddb49" 
-                width="100%" 
-                height="900px" 
-                frameborder="0" 
-                style="border: 1px solid #eee; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-            </iframe>
+        <section class="buying-steps">
+            <h2 class="section-title">The Auburn Buying Process</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h4>Pre-Approval</h4>
+                    <p>Before we tour, we need to know your buying power. I can connect you with local Auburn lenders who know the market.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h4>The Search</h4>
+                    <p>From Cary Woods to Moores Mill, we’ll narrow down neighborhoods that fit your lifestyle and school needs.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h4>The Offer</h4>
+                    <p>I’ll handle the heavy lifting—negotiating price, terms, and contingencies to protect your interests.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <h4>Closing</h4>
+                    <p>From home inspections to the final walkthrough, I’ll be there to ensure a smooth transition to your new home.</p>
+                </div>
+            </div>
         </section>
-      
+
+
+        <section class="search-section">
+            <h2 style="color: var(--primary); margin-bottom: 30px;">Live MLS Property Search</h2>
+            <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+                <iframe title="real estate search"
+                    src="https://matrix.lcar.mlsmatrix.com/Matrix/public/IDX.aspx?idx=9ddb49" 
+                    width="100%" 
+                    height="900px" 
+                    frameborder="0" 
+                    style="border: 1px solid #eee; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                </iframe>
+            </div>
+        </section>
+
         <section id="disclosures" style="background: #f8f9fa; padding: 50px 5%; border-top: 1px solid #eee;">
-          <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-              <div style="flex: 1; min-width: 300px;">
-                  <h4 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">Consumer Agency Disclosures</h4>
-                  <p style="font-size: 1rem; color: #666; max-width: 500px;">
-                      Alabama Law requires that you are informed of the types of services real estate licensees may perform.
-                  </p>
-              </div>
-              <div style="display: flex; gap: 20px;">
-                  <a href="/forms/recad/" style="background: var(--primary); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 0.9rem; transition: 0.3s;">VIEW RECAD</a>
-                  <a href="/forms/office-policy/" style="background: white; color: var(--primary); border: 2px solid var(--primary); padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 0.9rem; transition: 0.3s;">OFFICE POLICY</a>
-              </div>
-          </div>
-      </section>
+            <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h4 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">Ready to get started?</h4>
+                    <p style="font-size: 1rem; color: #666;">
+                        Download the mandatory Alabama RECAD disclosure and reach out for a custom search tailored to your needs.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="/forms/recad/" style="background: var(--primary); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold;">VIEW RECAD</a>
+                    <a href="/contact" style="background: var(--accent); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold;">CONTACT BRAD</a>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="footer-logo">Auburn International Real Estate Group</div>
         <p>3365 Skyway Drive, Suite 201, Auburn, AL 36830</p>
         <p>© 2026 Brad Caldwell. Licensed in the State of Alabama.</p>
-
         <div style="margin-top: 20px; display: flex; justify-content: center; align-items: center; gap: 25px;">
-            <img src="/images/realtorSym.jpg" 
-                 alt="Realtor and MLS Logos" 
-                 style="max-width: 160px; height: auto; opacity: 0.9;">
-
-            <img src="/images/equalHousing.jpg" 
-                 alt="Equal Housing Opportunity Logo" 
-                 style="max-height: 60px; width: auto; opacity: 0.9;">
-        </div>
-
-        <div style="margin-top: 25px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
-            <p style="font-size: 0.75rem; color: #bbb;">
-                REALTOR® — A registered collective membership mark that identifies a real estate professional who is a member of the National Association of REALTORS® and subscribes to its strict Code of Ethics.
-            </p>
+            <img src="/images/realtorSym.jpg" alt="Realtor and MLS Logos" style="max-width: 160px; height: auto;">
+            <img src="/images/equalHousing.jpg" alt="Equal Housing Opportunity Logo" style="max-height: 60px; width: auto;">
         </div>
     </footer>
 

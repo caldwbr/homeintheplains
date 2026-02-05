@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Brad Caldwell | Auburn International Real Estate Group</title>
+    <link rel="icon" type="image/png" href="/images/output2homeintheplainsFav2.png">
+    <link rel="apple-touch-icon" href="/images/output2homeintheplainsFav2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #002D62;
+            --accent: #E87722;
+            --text: #333;
+            --bg: #ffffff;
+            --light: #f8f9fa;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background-color: #fcfcfc; }
+
+        /* --- HEADER --- */
+        header { background: #fff; border-bottom: 2px solid #f0f0f0; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .branding h1 { font-size: 1.5rem; color: var(--primary); text-transform: uppercase; }
+        .branding h2 { font-size: 1.2rem; font-weight: 300; color: #666; }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        
+        /* Dropdown Logic (Desktop) */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            display: none; position: absolute; background: white; 
+            min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+            list-style: none; padding: 10px 0; top: 100%; border-top: 3px solid var(--accent);
+            right: 0;
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li a { padding: 10px 20px; font-size: 0.9rem; display: block; }
+
+
+
+        /* --- CONTACT FORM SECTION --- */
+        .contact-container { max-width: 800px; margin: 60px auto; padding: 0 5%; }
+        .form-header { text-align: center; margin-bottom: 40px; }
+        .form-header h3 { color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; }
+        
+        .contact-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--primary); font-size: 0.9rem; }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+
+        .conditional-field { display: none; } /* Hidden by default */
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover { background: var(--accent); }
+
+
+        /* --- 2. UNIVERSAL CONTAINERS --- */
+        .article-container, .blog-container, .forms-container { 
+            max-width: 960px; 
+            margin: 60px auto; 
+            padding: 0 5%; 
+        }
+        .steps-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        /* --- 3. COMPONENT STYLES --- */
+        .step-card { 
+            background: white; padding: 30px; border-radius: 12px; 
+            border-top: 4px solid var(--accent); height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .content h2 { margin-top: 40px; color: var(--primary); border-left: 5px solid var(--accent); padding-left: 20px; margin-bottom: 20px; }
+        .local-tip { background: #fff4ed; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); margin: 30px 0; }
+
+        /* --- 4. UNIVERSAL FOOTER --- */
+        footer { background: #222; color: #fff; padding: 60px 5%; text-align: center; font-size: 0.9rem; }
+        .footer-logo { font-size: 1.2rem; margin-bottom: 10px; }
+
+        /* --- 5. MASTER MOBILE FIX --- */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .branding { margin-bottom: 20px; }
+            
+            /* Ensure Nav is visible and centered */
+            nav { width: 100%; display: block !important; }
+            nav ul { justify-content: center; flex-wrap: wrap; gap: 10px 15px; }
+            nav a { font-size: 0.85rem; padding: 8px 4px; text-transform: uppercase; }
+
+            /* FORMS FIX: Standard link behavior on mobile, no dropdown poofing */
+            .dropdown-menu { display: none !important; }
+            .dropdown > a { pointer-events: auto !important; }
+
+            /* Spacing Fixes */
+            .article-container, .steps-grid { margin: 30px auto; padding: 0 20px; }
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <h1>Auburn International Real Estate Group</h1>
+                <h2>Brad Caldwell, REALTOR®</h2>
+                <p style="font-size: 0.85rem;">(334) 744-4901 | bradcaldwellreal@gmail.com | HomeInThePlains.com</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/buying">Buying</a></li>
+                    <li><a href="/selling">Selling</a></li>
+                    <li class="dropdown">
+                        <a href="/forms/index.html">Forms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/forms/recad/">RECAD</a></li>
+                            <li><a href="/forms/office-policy/">Office Policy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        <div class="form-header">
+            <h3>Get in Touch</h3>
+            <p>Whether you're buying your dream home or selling your current one, I'm here to help you navigate the Auburn market.</p>
+        </div>
+
+        <div class="contact-card">
+            <form action="https://formspree.io/f/mqedzkjg" method="POST">
+
+                <input type="hidden" name="_next" value="https://homeintheplains.com/thanks.html">
+
+                <input type="hidden" name="_subject" value="New Real Estate Lead">
+
+                <div class="form-group">
+                    <label for="intent">I am looking to:</label>
+                    <select name="intent" id="intent" required onchange="toggleFields()">
+                        <option value="" disabled selected>Select an option...</option>
+                        <option value="Buying">Buy a Home</option>
+                        <option value="Selling">Sell my Home</option>
+                        <option value="Other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div style="display: flex; gap: 20px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="_replyto" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(334) 000-0000" required>
+                    </div>
+                </div>
+
+                <div id="sell-fields" class="conditional-field">
+                    <div class="form-group">
+                        <label for="address">Property Address (to be sold)</label>
+                        <input type="text" id="address" name="sell_address" placeholder="123 Plains Way, Auburn, AL">
+                    </div>
+                </div>
+
+                <div id="buy-fields" class="conditional-field">
+                    <div class="form-group">
+                        <label for="price">Desired Price Range</label>
+                        <select name="price_range" id="price">
+                            <option value="unspecified">Select Range...</option>
+                            <option value="Under 200k">Under 200k</option>
+                            <option value="200k-400k">200k - 400k</option>
+                            <option value="400k-700k">400k - 700k</option>
+                            <option value="700k-1M">700k - 1M</option>
+                            <option value="1M+">1M+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell me more about your needs..."></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">Auburn International Real Estate Group</div>
+        <p>3365 Skyway Drive, Suite 201, Auburn, AL 36830</p>
+        <p>© 2026 Brad Caldwell. Licensed in the State of Alabama.</p>
+
+        <div style="margin-top: 20px; display: flex; justify-content: center; align-items: center; gap: 25px;">
+            <img src="/images/realtorSym.jpg" 
+                 alt="Realtor and MLS Logos" 
+                 style="max-width: 160px; height: auto; opacity: 0.9;">
+
+            <img src="/images/equalHousing.jpg" 
+                 alt="Equal Housing Opportunity Logo" 
+                 style="max-height: 60px; width: auto; opacity: 0.9;">
+        </div>
+
+        <div style="margin-top: 25px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+            <p style="font-size: 0.75rem; color: #bbb;">
+                REALTOR® — A registered collective membership mark that identifies a real estate professional who is a member of the National Association of REALTORS® and subscribes to its strict Code of Ethics.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFields() {
+            const intent = document.getElementById('intent').value;
+            const buyFields = document.getElementById('buy-fields');
+            const sellFields = document.getElementById('sell-fields');
+
+            // Reset visibility
+            buyFields.style.display = 'none';
+            sellFields.style.display = 'none';
+
+            if (intent === 'Buying') {
+                buyFields.style.display = 'block';
+            } else if (intent === 'Selling') {
+                sellFields.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

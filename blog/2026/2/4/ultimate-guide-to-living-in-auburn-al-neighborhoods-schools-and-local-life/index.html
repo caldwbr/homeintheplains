@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The definitive 2026 guide to living in Auburn, AL. Local insights on neighborhoods like Cary Woods and Moores Mill, Auburn City Schools, and hidden gems.">
+    <title>Living in Auburn, AL: The 2026 Local Guide | Brad Caldwell</title>
+    <link rel="icon" type="image/png" href="../../../../../images/output2homeintheplainsFav2.png">
+    <link rel="apple-touch-icon" href="../../../../../images/output2homeintheplainsFav2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #002D62;
+            --accent: #E87722;
+            --text: #333;
+            --bg: #ffffff;
+            --light: #f8f9fa;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background-color: #fcfcfc; }
+
+        /* --- 1. UNIVERSAL HEADER --- */
+        header { background: #fff; border-bottom: 2px solid #f0f0f0; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .branding h1 { font-size: 1.5rem; color: var(--primary); text-transform: uppercase; }
+        .branding h2 { font-size: 1.2rem; font-weight: 300; color: #666; }
+        nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; padding: 5px 0; }
+        nav a:hover { color: var(--accent); }
+
+        /* Dropdown Logic (Desktop) */
+        .dropdown { position: relative; cursor: pointer; }
+        .dropdown-menu { 
+            display: none; position: absolute; background: white; 
+            min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+            list-style: none; padding: 10px 0; top: 100%; border-top: 3px solid var(--accent);
+            right: 0;
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li a { padding: 10px 20px; font-size: 0.9rem; display: block; }
+
+        /* --- 2. UNIVERSAL CONTAINERS --- */
+        .article-container, .blog-container, .forms-container { 
+            max-width: 960px; 
+            margin: 60px auto; 
+            padding: 0 5%; 
+        }
+        .steps-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        /* --- 3. COMPONENT STYLES --- */
+        .step-card { 
+            background: white; padding: 30px; border-radius: 12px; 
+            border-top: 4px solid var(--accent); height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .content h2 { margin-top: 40px; color: var(--primary); border-left: 5px solid var(--accent); padding-left: 20px; margin-bottom: 20px; }
+        .local-tip { background: #fff4ed; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); margin: 30px 0; }
+
+        /* --- 4. UNIVERSAL FOOTER --- */
+        footer { background: #222; color: #fff; padding: 60px 5%; text-align: center; font-size: 0.9rem; }
+        .footer-logo { font-size: 1.2rem; margin-bottom: 10px; }
+
+        /* --- 5. MASTER MOBILE FIX --- */
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .branding { margin-bottom: 20px; }
+            
+            /* Ensure Nav is visible and centered */
+            nav { width: 100%; display: block !important; }
+            nav ul { justify-content: center; flex-wrap: wrap; gap: 10px 15px; }
+            nav a { font-size: 0.85rem; padding: 8px 4px; text-transform: uppercase; }
+
+            /* FORMS FIX: Standard link behavior on mobile, no dropdown poofing */
+            .dropdown-menu { display: none !important; }
+            .dropdown > a { pointer-events: auto !important; }
+
+            /* Spacing Fixes */
+            .article-container, .steps-grid { margin: 30px auto; padding: 0 20px; }
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <h1>Auburn International Real Estate Group</h1>
+                <h2>Brad Caldwell, REALTOR®</h2>
+                <p style="font-size: 0.85rem;">(334) 744-4901 | bradcaldwellreal@gmail.com | HomeInThePlains.com</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/buying">Buying</a></li>
+                    <li><a href="/selling">Selling</a></li>
+                    <li class="dropdown">
+                        <a href="/forms/index.html">Forms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/forms/recad/">RECAD</a></li>
+                            <li><a href="/forms/office-policy/">Office Policy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <article class="article-container">
+        
+        <div class="article-header">
+            <span class="article-meta">February 4, 2026 &bull; Local Guides</span>
+            <h1>The Ultimate Guide to Living in Auburn, AL: Neighborhoods, Schools, and Local Life</h1>
+            <p>From the charm of Cary Woods to the buzz of downtown, here is what you actually need to know before moving to the Plains.</p>
+        </div>
+
+        <div class="content">
+            <p>If you ask someone why they moved to Auburn, you’ll usually get the same answer: "We came for the University, but we stayed for the community."</p>
+            
+            <p>I’ve seen this town change a lot over the years. We aren't just a sleepy college village anymore; we’re one of the fastest-growing cities in the South. But despite the new developments and the traffic on College Street, Auburn has managed to keep that "small town" handshake culture alive.</p>
+            
+            <p>If you are looking to buy a home here in 2026, the landscape can be a little overwhelming. Do you want the historic charm near campus? The golf course life? Or a new build with land? Let’s break it down.</p>
+
+            <h2>1. The Lay of the Land: Neighborhoods</h2>
+            <p>Real estate here is incredibly pocketed. You can cross one street and be in a totally different price bracket and vibe.</p>
+
+            <h3>Cary Woods & The Historic District</h3>
+            <p>If you love azaleas, massive oak trees, and homes with actual character, this is where you look. Cary Woods is arguably the most desirable established neighborhood in town. It’s walkable, safe, and zoned for the highly-coveted Cary Woods Elementary. The trade-off? Inventory is low, and when a good home hits the market, it moves fast.</p>
+
+            <h3>Moores Mill & Ogletree</h3>
+            <p>Head down to South Auburn, and things open up. This is "Golf Course Living" territory. Moores Mill Club has become a massive social hub—it’s not just about golf; the pool and dining scene there is a huge draw for families. The homes are larger, the lots are bigger, but you will be driving a bit more to get to the grocery store.</p>
+
+            <h3>North Auburn (The Growth Zone)</h3>
+            <p>Areas like <strong>Northgate</strong> and the developments off Hwy 280 are booming. If you want new construction, modern finishes, and a community pool without the "historic home maintenance" headache, this is your spot. It’s also a smarter commute if you work in Birmingham or Opelika.</p>
+
+            <div class="local-tip">
+                <strong>Local Tip:</strong> Don’t sleep on <strong>Asheton Lakes</strong> if you want that "waterfront" feel without leaving the city limits. It’s quiet, gated, and the walking trails around the lakes are fantastic.
+            </div>
+
+            <h2>2. The Schools: The Real Draw</h2>
+            <p>Let’s be honest: The <strong>Auburn City Schools (ACS)</strong> system is the #1 driver of property values here. We consistently rank in the top 3 districts in the entire state.</p>
+            
+            <p>We opened the new Auburn High School back in 2017, and it rivals most college campuses. Whether it's the IB program, the athletics, or the arts, the resources here are unmatched. If you are moving from out of state, rest assured: you don’t need to hunt for private schools here unless you just want to. The public system is that good.</p>
+
+            <h2>3. Local Life: Beyond Football</h2>
+            <p>Yes, Saturdays in the fall are sacred. But what about the other 350 days of the year?</p>
+
+            <p><strong>Coffee Culture:</strong> If you need to get work done, skip the big chains. Locals go to <strong>Coffee Mafia</strong> (formerly Mama Mocha's) for the strongest espresso in town, or <strong>Well Red</strong> if you want to browse books and grab a glass of wine with your latte. </p>
+
+            <p><strong>The Outdoors:</strong> <strong>Chewacla State Park</strong> is our backyard gem. It’s not just a park; it’s 696 acres of trails, waterfalls, and a 26-acre lake. If you’re a mountain biker, the trails are world-class. If you just want a hike, take the <em>Mountain Laurel Trail</em> down to the falls (locals call the swimming hole "Gin Saw Hole").</p>
+
+            <h2>Final Thoughts</h2>
+            <p>Auburn is a special place. It’s big enough to have everything you need (hello, Target and multiple Publix locations), but small enough that you’ll run into friends at the grocery store.</p>
+            
+            <p>If you’re thinking about making the move, the market is competitive, but manageable if you have the right strategy. Don’t trust the Zillow "Zestimates"—they rarely account for the specific nuances of our neighborhoods.</p>
+
+        </div>
+
+        <div class="author-box">
+            <div class="author-img" style="background: url('/images/brad-headshot.jpg') center/cover;"></div> 
+            <div class="author-text">
+                <h4>Written by Brad Caldwell</h4>
+                <p>Helping families find their home in the Plains. Whether you're buying your first home or selling an estate, I'm here to help.</p>
+                <a href="/contact" class="cta-btn">Let's Grab Coffee</a>
+            </div>
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="footer-logo">Auburn International Real Estate Group</div>
+        <p>3365 Skyway Drive, Suite 201, Auburn, AL 36830</p>
+        <p>© 2026 Brad Caldwell. Licensed in the State of Alabama.</p>
+
+        <div style="margin-top: 20px; display: flex; justify-content: center; align-items: center; gap: 25px;">
+            <img src="/images/realtorSym.jpg" 
+                 alt="Realtor and MLS Logos" 
+                 style="max-width: 160px; height: auto; opacity: 0.9;">
+
+            <img src="/images/equalHousing.jpg" 
+                 alt="Equal Housing Opportunity Logo" 
+                 style="max-height: 60px; width: auto; opacity: 0.9;">
+        </div>
+
+        <div style="margin-top: 25px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+            <p style="font-size: 0.75rem; color: #bbb;">
+                REALTOR® — A registered collective membership mark that identifies a real estate professional who is a member of the National Association of REALTORS® and subscribes to its strict Code of Ethics.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
